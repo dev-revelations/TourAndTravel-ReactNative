@@ -46,7 +46,7 @@ export const colors: IColors = {
         error: colorDanger,
         success: colorSuccess,
         contrast: colorPrimaryContrast
-    };
+    }
 };
 
 
