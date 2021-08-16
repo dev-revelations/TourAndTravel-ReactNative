@@ -1,4 +1,6 @@
 
+const fontSizeUnit = 'px';
+
 export const fonts: IFonts = {
     body: 'Nunito',
     heading: 'Nunito',
@@ -12,15 +14,15 @@ export const fontWeights: IFontWeights = {
 
 export const fontSizes: IFontSizeScreen = {
     sm: {
-        caption: '12px',
-        button: '14px',
-        body: '16px',
-        title: '20px',
-        h5: '24px',
-        h4: '34px',
-        h3: '45px',
-        h2: '56px',
-        h1: '112px',
+        caption: `12${fontSizeUnit}`,
+        button: `14${fontSizeUnit}`,
+        body: `16${fontSizeUnit}`,
+        title: `20${fontSizeUnit}`,
+        h5: `24${fontSizeUnit}`,
+        h4: `34${fontSizeUnit}`,
+        h3: `45${fontSizeUnit}`,
+        h2: `56${fontSizeUnit}`,
+        h1: `112${fontSizeUnit}`,
     }
 }
 
