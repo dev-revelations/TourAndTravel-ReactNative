@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
 import { customFonts } from './src/utils';
+import { AppContextProvider } from './src/services/app/AppContext';
 
 
 export default function App() {
@@ -12,10 +13,14 @@ export default function App() {
 
   if (fontsLoaded && !error) {
     return (
-      <View style={styles.container}>
-        <Text style={{fontFamily: 'Nunito', fontWeight:'700'}}>Open up App.tsx to start working on your app!</Text>
+      <>
+        <AppContextProvider>
+          <View style={styles.container}>
+            <Text style={{ fontFamily: 'Nunito', fontWeight: '700' }}>Open up App.tsx to start working on your app!</Text>
+          </View>
+        </AppContextProvider>
         <StatusBar style="auto" />
-      </View>
+      </>
     );
   } else {
     return (<AppLoading />);
