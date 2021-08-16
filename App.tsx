@@ -5,6 +5,7 @@ import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
 import { customFonts } from './src/utils';
 import { AppContextProvider } from './src/services/app/AppContext';
+import { SafeArea } from './src/components/SafeArea/SafeArea';
 
 
 export default function App() {
@@ -15,9 +16,11 @@ export default function App() {
     return (
       <>
         <AppContextProvider>
+          <SafeArea>
           <View style={styles.container}>
             <Text style={{ fontFamily: 'Nunito', fontWeight: '700' }}>Open up App.tsx to start working on your app!</Text>
           </View>
+          </SafeArea>
         </AppContextProvider>
         <StatusBar style="auto" />
       </>
@@ -29,7 +32,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
