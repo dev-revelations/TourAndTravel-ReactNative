@@ -6,7 +6,7 @@ import { IThemeProp } from "../../types";
 const defaultTextStyle = (theme: ITheme) => `
     font-family: ${theme.fonts.body};
     font-weight: ${theme.fontWeights.regular};
-    font-size: ${theme.fontSizes[theme.screen]?.body};
+    font-size: ${theme.fontSizes[theme.screen]?.body}${theme.unit};
     color: ${theme.colors.text.primary};
     flex-wrap: wrap;
     margin-top: 0px;
@@ -14,11 +14,11 @@ const defaultTextStyle = (theme: ITheme) => `
 `;
 
 const caption = (theme: ITheme) => `
-    font-size: ${theme.fontSizes[theme.screen]?.caption};
+    font-size: ${theme.fontSizes[theme.screen]?.caption}${theme.unit};
 `;
 
 const title = (theme: ITheme) => `
-    font-size: ${theme.fontSizes[theme.screen]?.title};
+    font-size: ${theme.fontSizes[theme.screen]?.title}${theme.unit};
     font-family: ${theme.fonts.heading};
 `;
 

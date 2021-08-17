@@ -6,7 +6,8 @@ export interface ITheme {
     fonts: IFonts,
     fontSizes: IFontSizeScreen,
     fontWeights: IFontWeights,
-    screen: MediaSize
+    screen: MediaSize,
+    unit: SizeUnit
 }
 
 export enum MediaSize {
@@ -16,10 +17,15 @@ export enum MediaSize {
     Xlarge = 'xl'
 }
 
+export enum SizeUnit {
+    px = 'px'
+}
+
 export default {
     colors,
     fonts,
     fontSizes,
     fontWeights,
-    screen: MediaSize.Small
+    screen: MediaSize.Small,
+    unit: SizeUnit.px
 } as ITheme;
