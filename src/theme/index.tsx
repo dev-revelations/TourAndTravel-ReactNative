@@ -1,6 +1,7 @@
 import { colors, IColors } from './colors';
 import { fonts, fontSizes, fontWeights, IFonts, IFontSizeScreen, IFontWeights } from './fonts';
 import { size, ISizeScreen } from './sizes';
+import { ISpaceScreen, space } from './spacing';
 
 export interface ITheme {
     colors: IColors,
@@ -8,6 +9,7 @@ export interface ITheme {
     fontSizes: IFontSizeScreen,
     fontWeights: IFontWeights,
     size: ISizeScreen,
+    space: ISpaceScreen,
     screen: MediaSize,
     unit: SizeUnit
 }
@@ -29,6 +31,7 @@ export default {
     fontSizes,
     fontWeights,
     size,
+    space,
     screen: MediaSize.Small,
     unit: SizeUnit.px
 } as ITheme;
