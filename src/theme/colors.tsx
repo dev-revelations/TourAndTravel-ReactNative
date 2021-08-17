@@ -43,6 +43,7 @@ export const colors: IColors = {
     text: {
         primary: colorSecondary,
         secondary: colorTertiary,
+        accent: colorPrimary,
         error: colorDanger,
         success: colorSuccess,
         contrast: colorPrimaryContrast
@@ -73,4 +74,5 @@ export interface ITextColorVariants extends IColorVariants {
     contrast: string,
     error: string,
     success: string,
+    accent: string,
 }
