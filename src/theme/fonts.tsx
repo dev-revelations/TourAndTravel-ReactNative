@@ -12,25 +12,30 @@ export const fontWeights: IFontWeights = {
     bold: 700
 }
 
+const defaultFontSizes: IFontSizes = {
+    caption: `12${fontSizeUnit}`,
+    button: `14${fontSizeUnit}`,
+    body: `16${fontSizeUnit}`,
+    title: `20${fontSizeUnit}`,
+    h5: `24${fontSizeUnit}`,
+    h4: `34${fontSizeUnit}`,
+    h3: `45${fontSizeUnit}`,
+    h2: `56${fontSizeUnit}`,
+    h1: `112${fontSizeUnit}`,
+};
+
 export const fontSizes: IFontSizeScreen = {
-    sm: {
-        caption: `12${fontSizeUnit}`,
-        button: `14${fontSizeUnit}`,
-        body: `16${fontSizeUnit}`,
-        title: `20${fontSizeUnit}`,
-        h5: `24${fontSizeUnit}`,
-        h4: `34${fontSizeUnit}`,
-        h3: `45${fontSizeUnit}`,
-        h2: `56${fontSizeUnit}`,
-        h1: `112${fontSizeUnit}`,
-    }
+    sm: defaultFontSizes,
+    md: defaultFontSizes,
+    lg: defaultFontSizes,
+    xl: defaultFontSizes
 }
 
 export interface IFontSizeScreen {
     sm: IFontSizes,
-    md?: IFontSizes,
-    lg?: IFontSizes,
-    xl?: IFontSizes
+    md: IFontSizes,
+    lg: IFontSizes,
+    xl: IFontSizes
 }
 
 export interface IFontWeights {
