@@ -37,8 +37,8 @@ export const colors: IColors = {
         secondary: colorSecondary,
         tertiary: colorTertiary,
         error: colorDanger,
-        success: colorSuccess
-
+        success: colorSuccess,
+        contrast: colorPrimaryContrast
     },
     text: {
         primary: colorSecondary,
@@ -66,6 +66,7 @@ export interface IUIColorVariants extends IColorVariants {
     tertiary: string,
     error: string,
     success: string,
+    contrast: string,
 }
 
 export interface ITextColorVariants extends IColorVariants {
