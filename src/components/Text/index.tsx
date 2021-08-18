@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Text as RNText } from 'react-native';
-import { ITheme } from "../../theme";
-import { IThemeProp } from "../../types";
+import { ITheme, IThemeProp } from "../../types";
 import { FontSizes, getFontSize } from "../../helpers/theme.helper";
 
 const defaultTextStyle = (theme: ITheme) => `

@@ -1,7 +1,4 @@
-import { ITheme } from "../theme";
-import { IFontSizes } from "../theme/fonts";
-import { ISize } from "../theme/sizes";
-import { ISpace } from "../theme/spacing";
+import { IFontSizes, ISize, ISpace, ITheme } from "../types";
 
 export enum Spaces {
     s0 = 's0',
