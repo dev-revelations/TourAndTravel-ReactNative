@@ -32,7 +32,7 @@ export const Icon: FC<IconProps> = styled(FontAwesome) <IconProps> `
 `;
 
 export interface IconProps {
-    theme: ITheme,
+    theme?: ITheme,
     name: string;
     smaller?: boolean;
     small?: boolean;
