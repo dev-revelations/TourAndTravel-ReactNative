@@ -12,5 +12,6 @@ export default {
     size,
     space,
     screen: MediaSize.Small,
-    unit: SizeUnit.px
+    unit: SizeUnit.px,
+    transitionSpeed: 200,
 } as ITheme;

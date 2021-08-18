@@ -18,7 +18,8 @@ export interface ITheme {
     size: ISizeScreen,
     space: ISpaceScreen,
     screen: MediaSize,
-    unit: SizeUnit
+    unit: SizeUnit,
+    transitionSpeed: number;
 }
 
 export interface IColors {
