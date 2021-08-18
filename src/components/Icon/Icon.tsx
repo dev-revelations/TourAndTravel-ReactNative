@@ -1,13 +1,14 @@
 import { FontAwesome } from '@expo/vector-icons';
 import { FC } from 'react';
 import styled from "styled-components";
+import { getSize, Sizes } from '../../helpers/theme.helper';
 import theme, { ITheme } from '../../theme';
 import { IThemeProp } from '../../types';
 
 
-const smaller = (theme: ITheme) => `font-size: ${theme.size[theme.screen].smaller}${theme.unit};`;
-const small = (theme: ITheme) => `font-size: ${theme.size[theme.screen].small}${theme.unit};`;
-const larger = (theme: ITheme) => `font-size: ${theme.size[theme.screen].large}${theme.unit};`;
+const smaller = (theme: ITheme) => `font-size: ${getSize(theme, Sizes.smaller)};`;
+const small = (theme: ITheme) => `font-size: ${getSize(theme, Sizes.small)};`;
+const larger = (theme: ITheme) => `font-size: ${getSize(theme, Sizes.large)};`;
 const withSize = (theme: ITheme, size: number) => `font-size: ${size}${theme.unit};`;
 
 const colorPrimary = (theme: ITheme) => `color: ${theme.colors.ui.primary};`;
@@ -17,7 +18,7 @@ const colorContrast = (theme: ITheme) => `color: ${theme.colors.ui.contrast};`;
 
 export const Icon: FC<IconProps> = styled(FontAwesome) <IconProps> `
     ${({ theme: ITheme }) => `color: ${theme.colors.text.primary}`};
-    ${({ theme: ITheme }) => `font-size: ${theme.size[theme.screen].medium}${theme.unit}`};
+    ${({ theme: ITheme }) => `font-size: ${getSize(theme, Sizes.medium)}`};
     ${(props) =>
         (props.smaller && smaller(props.theme))
         || (props.small && small(props.theme))

@@ -2,11 +2,12 @@ import styled from "styled-components";
 import { Text as RNText } from 'react-native';
 import { ITheme } from "../../theme";
 import { IThemeProp } from "../../types";
+import { FontSizes, getFontSize } from "../../helpers/theme.helper";
 
 const defaultTextStyle = (theme: ITheme) => `
     font-family: ${theme.fonts.body};
     font-weight: ${theme.fontWeights.regular};
-    font-size: ${theme.fontSizes[theme.screen]?.body}${theme.unit};
+    font-size: ${getFontSize(theme, FontSizes.body)};
     color: ${theme.colors.text.primary};
     flex-wrap: wrap;
     margin-top: 0px;
@@ -14,11 +15,11 @@ const defaultTextStyle = (theme: ITheme) => `
 `;
 
 const caption = (theme: ITheme) => `
-    font-size: ${theme.fontSizes[theme.screen]?.caption}${theme.unit};
+    font-size: ${getFontSize(theme, FontSizes.caption)};
 `;
 
 const title = (theme: ITheme) => `
-    font-size: ${theme.fontSizes[theme.screen]?.title}${theme.unit};
+    font-size: ${getFontSize(theme, FontSizes.title)};
     font-family: ${theme.fonts.heading};
 `;
 
