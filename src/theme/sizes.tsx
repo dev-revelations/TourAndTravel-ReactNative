@@ -1,3 +1,5 @@
+import { ISize, ISizeScreen } from "../types";
+
 const defaultSizes: ISize = Object.freeze<ISize>({
     xSmall: 8,
     smaller: 16,
@@ -13,19 +15,3 @@ export const size: ISizeScreen = Object.freeze<ISizeScreen>({
     lg: defaultSizes,
     xl: defaultSizes,
 });
-
-export interface ISizeScreen {
-    sm: ISize,
-    md: ISize,
-    lg: ISize,
-    xl: ISize
-}
-
-export interface ISize {
-    xSmall: number,
-    smaller: number,
-    small: number,
-    medium: number,
-    large: number,
-    xLarge: number
-}

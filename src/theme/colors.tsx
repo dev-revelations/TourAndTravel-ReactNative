@@ -1,3 +1,4 @@
+import { IColors } from "../types";
 
 const colorPrimary = '#ffa500';
 const colorPrimaryContrast = '#ffffff';
@@ -49,30 +50,3 @@ export const colors: IColors = {
         contrast: colorPrimaryContrast
     }
 };
-
-
-export interface IColors {
-    background: IColorVariants,
-    ui: IUIColorVariants,
-    text: ITextColorVariants
-}
-
-
-export interface IColorVariants {
-    primary: string,
-    secondary: string,
-}
-
-export interface IUIColorVariants extends IColorVariants {
-    tertiary: string,
-    error: string,
-    success: string,
-    contrast: string,
-}
-
-export interface ITextColorVariants extends IColorVariants {
-    contrast: string,
-    error: string,
-    success: string,
-    accent: string,
-}

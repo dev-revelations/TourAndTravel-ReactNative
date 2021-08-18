@@ -1,3 +1,4 @@
+import { ISpace, ISpaceScreen } from "../types";
 
 const defaultSpace: ISpace = Object.freeze<ISpace>({
     s0: 0,
@@ -14,20 +15,3 @@ export const space: ISpaceScreen = Object.freeze<ISpaceScreen>({
     lg: defaultSpace,
     xl: defaultSpace
 });
-
-
-export interface ISpaceScreen {
-    sm: ISpace,
-    md: ISpace,
-    lg: ISpace,
-    xl: ISpace
-}
-
-export interface ISpace {
-    s0: number,
-    s1: number,
-    s2: number,
-    s3: number,
-    s4: number,
-    s5: number,
-}

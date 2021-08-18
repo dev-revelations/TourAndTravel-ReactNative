@@ -1,3 +1,4 @@
+import { IFonts, IFontSizes, IFontSizeScreen, IFontWeights } from "../types";
 
 export const fonts: IFonts = {
     body: 'Nunito',
@@ -29,36 +30,4 @@ export const fontSizes: IFontSizeScreen = {
     md: defaultFontSizes,
     lg: defaultFontSizes,
     xl: defaultFontSizes
-}
-
-export interface IFontSizeScreen {
-    sm: IFontSizes,
-    md: IFontSizes,
-    lg: IFontSizes,
-    xl: IFontSizes
-}
-
-export interface IFontWeights {
-    regular: number,
-    medium: number,
-    bold: number
-}
-
-export interface IFontSizes {
-    caption: number,
-    button: number,
-    body: number,
-    title: number,
-    h5: number,
-    h4: number,
-    h3: number,
-    h2: number,
-    h1: number,
-}
-
-export interface IFonts {
-    body: string,
-    bodyBold: string,
-    heading: string,
-    headingBold: string
 }
