@@ -18,13 +18,13 @@ const caption = (theme: ITheme) => `
     font-size: ${getFontSize(theme, FontSizes.caption)};
 `;
 
-const title = (theme: ITheme) => `
+const title = (theme: ITheme, bold: boolean | undefined) => `
     font-size: ${getFontSize(theme, FontSizes.title)};
-    font-family: ${theme.fonts.heading};
+    font-family: ${bold ? theme.fonts.headingBold : theme.fonts.heading};
 `;
 
 const bold = (theme: ITheme) => `
-    font-weight: ${theme.fontWeights.bold};
+    font-family: ${theme.fonts.bodyBold};
 `;
 
 const contrast = (theme: ITheme) => `
@@ -47,7 +47,7 @@ export const Text = styled(RNText) <ITextProps>`
     }
     ${(props) =>
         (props.caption && caption(props.theme))
-        || (props.title && title(props.theme))
+        || (props.title && title(props.theme, props.bold))
     }
     ${(props) =>
         (props.capitalize && capitalize(props.theme))

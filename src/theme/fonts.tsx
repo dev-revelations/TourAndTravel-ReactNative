@@ -1,7 +1,9 @@
 
 export const fonts: IFonts = {
     body: 'Nunito',
+    bodyBold: 'Nunito-Bold',
     heading: 'Nunito',
+    headingBold: 'Nunito-Bold'
 }
 
 export const fontWeights: IFontWeights = {
@@ -56,5 +58,7 @@ export interface IFontSizes {
 
 export interface IFonts {
     body: string,
+    bodyBold: string,
     heading: string,
+    headingBold: string
 }
