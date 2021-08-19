@@ -36,10 +36,12 @@ const accent = (theme: ITheme) => `
 
 const capitalize = (theme: ITheme) => `text-transform: capitalize;`;
 const uppercase = (theme: ITheme) => `text-transform: uppercase;`;
+const centered = () => `text-align: center;`;
 
 export const Text = styled(RNText) <ITextProps>`
     ${(props) => defaultTextStyle(props.theme)}
     ${(props) => props.bold && bold(props.theme)}
+    ${(props) => props.centered && centered()}
     ${(props) =>
         (props.contrast && contrast(props.theme))
         || (props.accent && accent(props.theme))
@@ -62,4 +64,5 @@ interface ITextProps extends IThemeProp {
     accent?: boolean,
     capitalize?: boolean,
     uppercase?: boolean,
+    centered?: boolean,
 }
