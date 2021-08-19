@@ -1,10 +1,12 @@
 import { IFonts, IFontSizes, IFontSizeScreen, IFontWeights } from "../types";
 
 export const fonts: IFonts = {
-    body: 'Nunito',
-    bodyBold: 'Nunito-Bold',
-    heading: 'Nunito',
-    headingBold: 'Nunito-Bold'
+    body400: 'Nunito',
+    body600: 'Nunito-SemiBold',
+    body700: 'Nunito-Bold',
+    heading400: 'Nunito',
+    heading600: 'Nunito-SemiBold',
+    heading700: 'Nunito-Bold'
 }
 
 export const fontWeights: IFontWeights = {

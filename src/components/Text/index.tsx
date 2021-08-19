@@ -4,7 +4,7 @@ import { ITheme, IThemeProp } from "../../types";
 import { FontSizes, getFontSize } from "../../helpers/theme.helper";
 
 const defaultTextStyle = (theme: ITheme) => `
-    font-family: ${theme.fonts.body};
+    font-family: ${theme.fonts.body400};
     font-weight: ${theme.fontWeights.regular};
     font-size: ${getFontSize(theme, FontSizes.body)};
     color: ${theme.colors.text.primary};
@@ -19,11 +19,11 @@ const caption = (theme: ITheme) => `
 
 const title = (theme: ITheme, bold: boolean | undefined) => `
     font-size: ${getFontSize(theme, FontSizes.title)};
-    font-family: ${bold ? theme.fonts.headingBold : theme.fonts.heading};
+    font-family: ${bold ? theme.fonts.heading700 : theme.fonts.heading400};
 `;
 
 const bold = (theme: ITheme) => `
-    font-family: ${theme.fonts.bodyBold};
+    font-family: ${theme.fonts.body700};
 `;
 
 const contrast = (theme: ITheme) => `

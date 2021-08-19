@@ -100,10 +100,12 @@ export interface IFontSizes {
 }
 
 export interface IFonts {
-    body: string,
-    bodyBold: string,
-    heading: string,
-    headingBold: string
+    body400: string,
+    body600: string,
+    body700: string,
+    heading400: string,
+    heading600: string,
+    heading700: string
 }
 
 export interface IFontSizeScreen {
