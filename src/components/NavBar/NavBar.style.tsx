@@ -1,8 +1,9 @@
-import { Animated, TextInput, TouchableOpacity, View } from "react-native";
+import { Animated, TouchableOpacity, View } from "react-native";
 import styled from "styled-components";
 import { getSpace, responsiveSpace, Spaces } from "../../helpers/theme.helper";
 import { IThemeProp } from "../../types";
 import { Icon } from "../Icon/Icon";
+import { TextBox } from "../TextBox/TextBox";
 
 export const Header = styled(View) <IThemeProp>`
     z-index: 1000;
@@ -61,7 +62,7 @@ export const SearchBarContainer = styled(Animated.View) <IThemeProp> `
     padding-right: 3%;
 `;
 
-export const SearchBar = styled(TextInput)`
+export const SearchBar = styled(TextBox)`
     flex: 1;
     background-color: ${({ theme }) => theme.colors.ui.contrast};
     border-radius: 5px;
