@@ -1,7 +1,9 @@
 import { IColors } from "../types";
 
 const colorPrimary = '#ffa500';
+const colorPrimaryRgb = '255, 165, 0';
 const colorPrimaryContrast = '#ffffff';
+const colorPrimaryContrastRgb = '255, 255, 255';
 const colorPrimaryShade = '#e09100';
 const colorPrimaryTint = '#ffae1a';
 
@@ -35,11 +37,13 @@ export const colors: IColors = {
     },
     ui: {
         primary: colorPrimary,
+        primaryRgb: colorPrimaryRgb,
         secondary: colorSecondary,
         tertiary: colorTertiary,
         error: colorDanger,
         success: colorSuccess,
-        contrast: colorPrimaryContrast
+        contrast: colorPrimaryContrast,
+        contrastRgb: colorPrimaryContrastRgb,
     },
     text: {
         primary: colorSecondary,
