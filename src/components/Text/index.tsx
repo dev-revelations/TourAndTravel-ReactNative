@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Text as RNText } from 'react-native';
+import { Animated, Text as RNText } from 'react-native';
 import { ITheme, IThemeProp } from "../../types";
 import { FontSizes, getFontSize } from "../../helpers/theme.helper";
 
@@ -38,7 +38,7 @@ const capitalize = (theme: ITheme) => `text-transform: capitalize;`;
 const uppercase = (theme: ITheme) => `text-transform: uppercase;`;
 const centered = () => `text-align: center;`;
 
-export const Text = styled(RNText) <ITextProps>`
+export const Text = styled(Animated.Text) <ITextProps>`
     ${(props) => defaultTextStyle(props.theme)}
     ${(props) => props.bold && bold(props.theme)}
     ${(props) => props.centered && centered()}
