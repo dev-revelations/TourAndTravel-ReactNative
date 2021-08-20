@@ -4,7 +4,7 @@ import { useTheme } from "styled-components";
 import { ITheme } from "../../types";
 import { ButtonContainer, ButtonText } from "./Button.style";
 
-export const Button: FC = ({ children }) => {
+export const Button: FC<ButtonProps> = ({ children, onClick }) => {
 
     const theme = useTheme() as ITheme;
 
@@ -38,7 +38,10 @@ export const Button: FC = ({ children }) => {
     }
 
     return (
-        <TouchableWithoutFeedback onPressIn={pressIn} onPressOut={pressOut}>
+        <TouchableWithoutFeedback
+            onPressIn={pressIn}
+            onPressOut={pressOut}
+            onPress={onClick ? onClick : () => { }}>
             <ButtonContainer style={{ backgroundColor: bgInterpolation }}>
                 <ButtonText contrast centered bold capitalize
                     style={{ color: textInterpolation }}>
@@ -47,4 +50,8 @@ export const Button: FC = ({ children }) => {
             </ButtonContainer>
         </TouchableWithoutFeedback>
     );
+}
+
+interface ButtonProps {
+    onClick?: { (): void }
 }
