@@ -20,11 +20,11 @@ interface TextBoxProps extends TextInputProps {
     focused?: boolean,
 }
 
-export const TextBox: FC<TextInputProps> = (props: TextInputProps) => {
+export const TextBox: FC<TextInputProps> = React.forwardRef((props: TextInputProps, ref) => {
     const [isFocused, setIsFocused] = useState(false);
     return (<StyledTextInput
         focused={isFocused}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
         {...props} />);
-}
+});
