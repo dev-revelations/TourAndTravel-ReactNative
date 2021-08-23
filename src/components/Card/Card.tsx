@@ -7,6 +7,7 @@ const defaultShadowRadius = 10;
 export const Card = styled(View) <CardProps>`
     border-radius: 5px;
     background-color: ${({ theme }) => theme.colors.background.primary};
+    overflow: hidden;
     shadow-color: #000;
     shadow-offset: 0 10px;
     shadow-opacity: 0.1;
