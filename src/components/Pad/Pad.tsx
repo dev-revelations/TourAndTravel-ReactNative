@@ -2,7 +2,6 @@ import React from 'react';
 import { useRef } from 'react';
 import { Animated, Pressable } from 'react-native';
 import styled, { useTheme } from 'styled-components';
-import { Text } from '../../components/Text';
 import { ITheme } from '../../types';
 
 const PadBox = styled(Animated.View)`
@@ -47,12 +46,13 @@ export const Pad = (props: PadProps) => {
                     shadowOpacity: opacityValue,
                     shadowRadius: shadowValue
                 }}>
-                <Text>asdsd</Text>
+                {props.children}
             </PadBox>
         </Pressable>
     );
 }
 
 interface PadProps {
-    shadowDepth?: number
+    shadowDepth?: number,
+    children: any
 }
