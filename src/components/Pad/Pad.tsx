@@ -2,6 +2,7 @@ import React from 'react';
 import { useRef } from 'react';
 import { Animated, Pressable } from 'react-native';
 import styled, { useTheme } from 'styled-components';
+import { getSpace, Spaces } from '../../helpers/theme.helper';
 import { ITheme } from '../../types';
 
 const PadBox = styled(Animated.View)`
@@ -12,6 +13,7 @@ const PadBox = styled(Animated.View)`
     shadow-opacity: 0.1;
     shadow-radius: 10px;
     elevation: 10;
+    margin: ${({ theme }) => getSpace(theme, Spaces.s3)};
 `;
 
 export const Pad = (props: PadProps) => {
