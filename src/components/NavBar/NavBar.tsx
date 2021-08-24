@@ -48,7 +48,7 @@ export const NavBar = ({ }) => {
                         <Icon name={searchBarOpen ? 'times' : 'search'} contrast small />
                     </Touchable>
                     <Touchable onPress={() => animateSearchBar(false)}>
-                        <Icon name="user" contrast small />
+                        <Icon name="user" solid contrast small />
                     </Touchable>
                 </NavButtons>
             </NavBarItemsContainer>

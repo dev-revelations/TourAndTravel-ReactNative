@@ -21,7 +21,7 @@ export const PackageBox = (props: PackageBoxProps) => {
                 source={props.image} />
             <PackageContent>
                 <PackageTitle>
-                    <Icon name="map-marker" primary small />
+                    <Icon name="map-marker-alt" primary small />
                     <PackageTitleText bold capitalize>{props.title}</PackageTitleText>
                 </PackageTitle>
                 <PackageContentText caption>

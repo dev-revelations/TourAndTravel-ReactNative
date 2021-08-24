@@ -1,4 +1,4 @@
-import { FontAwesome } from '@expo/vector-icons';
+import { FontAwesome5 } from '@expo/vector-icons';
 import { FC } from 'react';
 import styled from "styled-components";
 import { getSize, Sizes } from '../../helpers/theme.helper';
@@ -15,7 +15,7 @@ const colorSecondary = (theme: ITheme) => `color: ${theme.colors.ui.secondary};`
 const colorContrast = (theme: ITheme) => `color: ${theme.colors.ui.contrast};`;
 
 
-export const Icon: FC<IconProps> = styled(FontAwesome) <IconProps> `
+export const Icon: FC<IconProps> = styled(FontAwesome5) <IconProps> `
     ${({ theme }) => `color: ${theme.colors.text.primary}`};
     ${({ theme }) => `font-size: ${getSize(theme, Sizes.medium)}`};
     ${(props) =>

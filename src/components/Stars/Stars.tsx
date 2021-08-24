@@ -17,9 +17,9 @@ export const Stars: FC<StarsProps> = (props: StarsProps) => {
             {
                 [
                     Array(filledStars).fill(0)
-                        .map((v, i) => <Icon name="star" key={i} primary smaller />),
+                        .map((v, i) => <Icon name="star" solid key={i} primary smaller />),
                     Array(emptyStars).fill(0)
-                        .map((v, i) => <Icon name="star-o" key={i} primary smaller />)
+                        .map((v, i) => <Icon name="star" regular key={i} primary smaller />)
                 ]
             }
         </StarsContainer>
