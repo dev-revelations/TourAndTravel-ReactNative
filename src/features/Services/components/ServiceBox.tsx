@@ -1,13 +1,17 @@
 import React from 'react';
-import { Pad } from '../../../components/Pad/Pad';
 import { Text } from '../../../components/Text';
-import { ServiceBoxContainer, ServiceIcon, ServiceDescription } from './ServiceBox.style';
+import {
+    ServiceBoxContainer,
+    ServiceBoxPad,
+    ServiceDescription,
+    ServiceIcon
+} from './ServiceBox.style';
 
 export const ServiceBox = (props: ServiceBoxProps) => {
 
     return (
-        <Pad>
-            <ServiceBoxContainer>
+        <ServiceBoxContainer>
+            <ServiceBoxPad>
                 <ServiceIcon name={props.icon} primary larger />
                 <Text title capitalize bold centered>
                     {props.title}
@@ -15,8 +19,8 @@ export const ServiceBox = (props: ServiceBoxProps) => {
                 <ServiceDescription centered caption>
                     {props.description}
                 </ServiceDescription>
-            </ServiceBoxContainer>
-        </Pad>
+            </ServiceBoxPad>
+        </ServiceBoxContainer>
     );
 }
 

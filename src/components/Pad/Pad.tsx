@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRef } from 'react';
-import { Animated, Pressable } from 'react-native';
+import { Animated, Pressable, View } from 'react-native';
 import styled, { useTheme } from 'styled-components';
 import { getSpace, Spaces } from '../../helpers/theme.helper';
 import { ITheme } from '../../types';
@@ -48,7 +48,7 @@ export const Pad = (props: PadProps) => {
                     shadowOpacity: opacityValue,
                     shadowRadius: shadowValue
                 }}>
-                {props.children}
+                <View {...props}/>
             </PadBox>
         </Pressable>
     );
