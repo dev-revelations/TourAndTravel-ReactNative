@@ -12,7 +12,7 @@ export const Heading: FC<HeadingProps> = ({ text }) => {
                 words.map((word, wIndex) => [
                     word.split('')
                         .map((char, cIndex) =>
-                            (<HeadingSpan key={cIndex} uppercase bold>{char}</HeadingSpan>)
+                            (<HeadingSpan key={cIndex} uppercase bold centered>{char}</HeadingSpan>)
                         ),
                     <Text key={wIndex}>  </Text>
                 ])
