@@ -5,6 +5,6 @@ export const BookImage = styled(BookSvg)`
     flex: 1;
     flex-grow: 1;
     flex-shrink: 1;
-    flex-basis: 51%;
-    min-height: 200px;
+    min-height: 250px;
+    min-width: 250px;
 `;

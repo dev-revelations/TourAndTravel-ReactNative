@@ -1,5 +1,6 @@
 import React from "react";
 import { Heading } from "../../../components/Heading/Heading";
+import { Col } from "../../../components/Layouts/Col";
 import { Row } from "../../../components/Layouts/Row";
 import { Screen } from "../../../components/Layouts/Screen";
 import { BookForm } from "../components/BookForm";
@@ -12,8 +13,12 @@ export const BookScreen = () => {
         <Screen>
             <Heading text="book now" />
             <Row>
-                <BookImage />
-                <BookForm />
+                <Col>
+                    <BookImage />
+                </Col>
+                <Col>
+                    <BookForm />
+                </Col>
             </Row>
         </Screen>
     );
