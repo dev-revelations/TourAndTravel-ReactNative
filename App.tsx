@@ -11,6 +11,7 @@ import { ContactScreen } from './src/features/Contact/Screen/ContactScreen';
 import { GalleryScreen } from './src/features/Gallery/Screen/GalleryScreen';
 import { HomeScreen } from './src/features/Home/Screen/HomeScreen';
 import { PackagesScreen } from './src/features/Packages/Screen/PackagesScreen';
+import { ReviewScreen } from './src/features/Review/Screen/ReviewScreen';
 import { ServicesScreen } from './src/features/Services/Screen/ServicesScreen';
 import { AppContextProvider } from './src/services/app/AppContext';
 import { customFonts } from './src/utils';
@@ -33,6 +34,7 @@ export default function App() {
               <PackagesScreen />
               <ServicesScreen />
               <GalleryScreen />
+              <ReviewScreen />
               <ContactScreen />
               <AboutUsScreen />
             </ScrollView>
