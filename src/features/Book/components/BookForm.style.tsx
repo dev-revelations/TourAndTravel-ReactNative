@@ -13,10 +13,6 @@ export const BookFormContainer = styled(Card)`
     padding: 5%;
 `;
 
-export const InputContainer = styled(View)`
-    padding: 3% 0;
-`;
-
 export const BookTextInput = styled(TextBox)`
     width: 100%;
     border-width: 1px;

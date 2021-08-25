@@ -1,7 +1,8 @@
 import React from "react";
 import { Button } from "../../../components/Button/Button";
+import { InputContainer } from "../../../components/InputContainer/InputContainer";
 import { Text } from "../../../components/Text";
-import { BookFormContainer, BookTextInput, InputContainer } from "./BookForm.style";
+import { BookFormContainer, BookTextInput } from "./BookForm.style";
 
 export const BookForm = () => {
 
