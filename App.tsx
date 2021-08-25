@@ -5,6 +5,7 @@ import React from 'react';
 import { ScrollView } from 'react-native';
 import { NavBar } from './src/components/NavBar/NavBar';
 import { SafeArea } from './src/components/SafeArea/SafeArea';
+import { AboutUsScreen } from './src/features/AboutUs/Screen/AboutUsScreen';
 import { BookScreen } from './src/features/Book/Screen/BookScreen';
 import { ContactScreen } from './src/features/Contact/Screen/ContactScreen';
 import { GalleryScreen } from './src/features/Gallery/Screen/GalleryScreen';
@@ -33,6 +34,7 @@ export default function App() {
               <ServicesScreen />
               <GalleryScreen />
               <ContactScreen />
+              <AboutUsScreen />
             </ScrollView>
           </SafeArea>
         </AppContextProvider>
