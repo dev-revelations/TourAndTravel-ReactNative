@@ -1,11 +1,18 @@
+import AppLoading from 'expo-app-loading';
+import { useFonts } from 'expo-font';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { useFonts } from 'expo-font';
-import AppLoading from 'expo-app-loading';
-import { customFonts } from './src/utils';
-import { AppContextProvider } from './src/services/app/AppContext';
+import { ScrollView } from 'react-native';
+import { NavBar } from './src/components/NavBar/NavBar';
 import { SafeArea } from './src/components/SafeArea/SafeArea';
+import { BookScreen } from './src/features/Book/Screen/BookScreen';
+import { ContactScreen } from './src/features/Contact/Screen/ContactScreen';
+import { GalleryScreen } from './src/features/Gallery/Screen/GalleryScreen';
+import { HomeScreen } from './src/features/Home/Screen/HomeScreen';
+import { PackagesScreen } from './src/features/Packages/Screen/PackagesScreen';
+import { ServicesScreen } from './src/features/Services/Screen/ServicesScreen';
+import { AppContextProvider } from './src/services/app/AppContext';
+import { customFonts } from './src/utils';
 
 
 export default function App() {
@@ -15,26 +22,23 @@ export default function App() {
   if (fontsLoaded && !error) {
     return (
       <>
+        <StatusBar style="auto" />
         <AppContextProvider>
           <SafeArea>
-          <View style={styles.container}>
-            <Text style={{ fontFamily: 'Nunito', fontWeight: '700' }}>Open up App.tsx to start working on your app!</Text>
-          </View>
+            <NavBar />
+            <ScrollView style={{ flex: 1 }}>
+              <HomeScreen />
+              <BookScreen />
+              <PackagesScreen />
+              <ServicesScreen />
+              <GalleryScreen />
+              <ContactScreen />
+            </ScrollView>
           </SafeArea>
         </AppContextProvider>
-        <StatusBar style="auto" />
       </>
     );
   } else {
     return (<AppLoading />);
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
