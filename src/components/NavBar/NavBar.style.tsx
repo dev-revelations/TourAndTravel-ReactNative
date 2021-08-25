@@ -1,6 +1,6 @@
 import { Animated, TouchableOpacity, View } from "react-native";
 import styled from "styled-components";
-import { getSpace, responsiveSpace, Spaces } from "../../helpers/theme.helper";
+import { getSize, getSpace, responsiveSpace, Sizes, Spaces } from "../../helpers/theme.helper";
 import { IThemeProp } from "../../types";
 import { Icon } from "../Icon/Icon";
 import { TextBox } from "../TextBox/TextBox";
@@ -14,6 +14,7 @@ export const Header = styled(View) <IThemeProp>`
     padding-bottom: ${({ theme }) => getSpace(theme, Spaces.s2)};
     padding-left: ${({ theme }) => `${responsiveSpace(theme).s1}%`};
     padding-right: ${({ theme }) => `${responsiveSpace(theme).s1}%`};
+    height: ${({ theme }) => getSize(theme, Sizes.large)};
 `;
 
 export const NavBarItemsContainer = styled(View) <IThemeProp> `
@@ -46,11 +47,10 @@ export const LogoContainer = styled(View)`
 export const SearchBarContainer = styled(Animated.View) <IThemeProp> `
     z-index: 1001;
     position: absolute;
-    top: 100%;
+    top: ${({ theme }) => getSize(theme, Sizes.large)};
     left: 0;
     right: 0;
-    height: 64px;
-    margin-top: 4%;
+    height: 0px;    
     background-color: ${({ theme }) => theme.colors.ui.secondary};
     overflow: hidden;
     border-top-width: 1px;
@@ -60,6 +60,7 @@ export const SearchBarContainer = styled(Animated.View) <IThemeProp> `
     justify-content: space-between;
     padding-left: 3%;
     padding-right: 3%;
+    display: none;
 `;
 
 export const SearchBar = styled(TextBox)`

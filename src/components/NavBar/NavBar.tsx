@@ -10,6 +10,7 @@ import { BarsIcon, Header, LogoContainer, NavBarItemsContainer, NavButtons, Sear
 export const NavBar = ({ }) => {
 
     const [searchBarOpen, setSearchBarOpen] = useState(false);
+    const [displaySearchBar, setDisplaySearchBar] = useState(false);
 
     const theme = useTheme() as ITheme;
     const searchBarSize = responsiveSize(theme).large;
@@ -20,6 +21,7 @@ export const NavBar = ({ }) => {
     const animateSearchBar = (open = true) => {
         setSearchBarOpen(open);
         if (open) {
+            setDisplaySearchBar(true);
             searchBarRef.current?.focus();
         } else {
             searchBarRef.current?.clear();
@@ -29,7 +31,11 @@ export const NavBar = ({ }) => {
             toValue: open ? searchBarSize || 64 : 0,
             duration: speed,
             useNativeDriver: false
-        }).start();
+        }).start(() => {
+            if (!open) {
+                setDisplaySearchBar(false);
+            }
+        });
     }
 
     return (
@@ -52,7 +58,11 @@ export const NavBar = ({ }) => {
                     </Touchable>
                 </NavButtons>
             </NavBarItemsContainer>
-            <SearchBarContainer style={{ height: clipAnim }}>
+            <SearchBarContainer
+                style={[
+                    { height: clipAnim },
+                    { display: displaySearchBar ? 'flex' : 'none' }
+                ]}>
                 <SearchBar placeholder="Search..." ref={searchBarRef} />
                 <Icon name="search" contrast />
             </SearchBarContainer >
