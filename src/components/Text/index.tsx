@@ -22,6 +22,11 @@ const title = (theme: ITheme, bold: boolean | undefined) => `
     font-family: ${bold ? theme.fonts.heading700 : theme.fonts.heading400};
 `;
 
+const h = (theme: ITheme, bold: boolean | undefined, size: number) => `
+    font-size: ${getFontSize(theme, FontSizes[`h${size}` as keyof typeof FontSizes])};
+    font-family: ${bold ? theme.fonts.heading700 : theme.fonts.heading400};
+`;
+
 const bold = (theme: ITheme) => `
     font-family: ${theme.fonts.body700};
 `;
@@ -54,6 +59,14 @@ export const Text = styled(Animated.Text) <ITextProps>`
         (props.capitalize && capitalize(props.theme))
         || (props.uppercase && uppercase(props.theme))
     }
+
+    ${(props) =>
+        (props.h1) && h(props.theme, props.bold, 1)
+        || (props.h2) && h(props.theme, props.bold, 2)
+        || (props.h3) && h(props.theme, props.bold, 3)
+        || (props.h4) && h(props.theme, props.bold, 4)
+        || (props.h5) && h(props.theme, props.bold, 5)
+    }
 `;
 
 interface ITextProps extends IThemeProp {
@@ -65,4 +78,9 @@ interface ITextProps extends IThemeProp {
     capitalize?: boolean,
     uppercase?: boolean,
     centered?: boolean,
+    h1?: boolean,
+    h2?: boolean,
+    h3?: boolean,
+    h4?: boolean,
+    h5?: boolean,
 }
