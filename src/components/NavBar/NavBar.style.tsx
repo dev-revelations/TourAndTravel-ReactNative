@@ -6,7 +6,7 @@ import { Icon } from "../Icon/Icon";
 import { TextBox } from "../TextBox/TextBox";
 
 export const Header = styled(View) <IThemeProp>`
-    z-index: 1000;
+    z-index: 10000;
     position: relative;
     flex-direction: column;
     background-color: ${({ theme }) => theme.colors.ui.secondary};
@@ -51,7 +51,7 @@ export const SearchBarContainer = styled(Animated.View) <IThemeProp> `
     top: 0;
     left: 0;
     right: 0;
-    height: 0px;    
+      
     background-color: ${({ theme }) => theme.colors.ui.secondary};
     overflow: hidden;
     border-top-width: 1px;
@@ -80,4 +80,18 @@ export const BarsIcon = styled(Icon)`
   padding-bottom: 3px;
   padding-left: 12px;
   padding-right: 10px;
+`;
+
+export const MenuContainer = styled(Animated.View)`
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: ${({ theme }) => theme.colors.ui.secondary};
+    overflow: hidden;
+    border-top-width: 1px;
+    border-top-color: rgba(255, 255, 255, 0.2);
+    height: 0px;
+    display: none;
 `;

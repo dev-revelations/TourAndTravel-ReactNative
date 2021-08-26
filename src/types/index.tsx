@@ -40,7 +40,8 @@ export interface IUIColorVariants extends IColorVariants {
     success: string,
     contrast: string,
     primaryRgb: string,
-    contrastRgb: string
+    contrastRgb: string,
+    secondaryShade: string,
 }
 
 export interface ITextColorVariants extends IColorVariants {

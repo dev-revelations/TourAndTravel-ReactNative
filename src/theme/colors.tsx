@@ -9,7 +9,7 @@ const colorPrimaryTint = '#ffae1a';
 
 const colorSecondary = '#333333';
 const colorSecondaryContrast = '#ffffff';
-const colorSecondaryShade = '#2d2d2d';
+const colorSecondaryShade = '#222222';
 const colorSecondaryTint = '#474747';
 
 const colorTertiary = '#666666';
@@ -39,6 +39,7 @@ export const colors: IColors = {
         primary: colorPrimary,
         primaryRgb: colorPrimaryRgb,
         secondary: colorSecondary,
+        secondaryShade: colorSecondaryShade,
         tertiary: colorTertiary,
         error: colorDanger,
         success: colorSuccess,

@@ -4,6 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { ScrollView } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { Menu } from './src/components/Menu/Menu';
 import { NavBar } from './src/components/NavBar/NavBar';
 import { SafeArea } from './src/components/SafeArea/SafeArea';
 import { AboutUsScreen } from './src/features/AboutUs/Screen/AboutUsScreen';
@@ -18,6 +19,16 @@ import { AppContextProvider } from './src/services/app/AppContext';
 import { customFonts } from './src/utils';
 
 
+const menu = [
+  'home',
+  'book',
+  'packages',
+  'services',
+  'gallery',
+  'review',
+  'contact'
+];
+
 export default function App() {
 
   const [fontsLoaded, error] = useFonts(customFonts);
@@ -29,7 +40,7 @@ export default function App() {
         <AppContextProvider>
           <SafeAreaProvider>
             <SafeArea>
-              <NavBar />
+              <NavBar menu={<Menu menuItems={menu} />} />
               <ScrollView style={{ flex: 1 }}>
                 <HomeScreen />
                 <BookScreen />
