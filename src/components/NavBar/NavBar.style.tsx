@@ -11,7 +11,7 @@ export const Header = styled(View) <IThemeProp>`
     flex-direction: column;
     background-color: ${({ theme }) => theme.colors.ui.secondary};
     padding-top: ${({ theme }) => getSpace(theme, Spaces.s2)};
-    padding-bottom: ${({ theme }) => getSpace(theme, Spaces.s2)};
+    padding-bottom: ${({ theme }) => getSpace(theme, Spaces.s0)};
     padding-left: ${({ theme }) => `${responsiveSpace(theme).s1}%`};
     padding-right: ${({ theme }) => `${responsiveSpace(theme).s1}%`};
     height: ${({ theme }) => getSize(theme, Sizes.large)};
@@ -25,17 +25,18 @@ export const NavBarItemsContainer = styled(View) <IThemeProp> `
 
 export const NavButtons = styled(View) <IThemeProp> `
     flex: 2;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-evenly;    
     flex-direction: row;
     height: 100%;
 `;
 
 export const Touchable = styled(TouchableOpacity)`
-    height: 100%;
-    padding: 8px;
+    height: 100%;    
+    justify-content: center;
     align-items: center;
     min-width: 40px;
+    margin-right: ${({ theme }) => getSpace(theme, Spaces.s3)};
 `;
 
 export const LogoContainer = styled(View)`
