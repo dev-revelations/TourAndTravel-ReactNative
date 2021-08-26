@@ -1,15 +1,21 @@
 import { View } from "react-native";
 import styled from "styled-components";
+import { SlideControl } from "../../../components/SlideControl/SlideControl";
 import { Text } from '../../../components/Text';
 
 export const HomeScreenContainer = styled(View)`
     flex: 1;
     flex-direction: column;
     align-items: center;
-    top: 30%;
+    top: 15%;
 `;
 
 export const BigTitle = styled(Text)`
-    font-size: 30px;
     line-height: 45px;
 `;
+
+export const HomeSlideControl = styled(SlideControl)`
+    position: relative;
+    top: 15%;
+`;
+

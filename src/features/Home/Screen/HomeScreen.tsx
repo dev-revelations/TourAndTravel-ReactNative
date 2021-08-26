@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { BackgroundVideo } from '../../../components/BackgroundVideo/BackgroundVideo';
 import { Button } from '../../../components/Button/Button';
 import { SlideControl } from '../../../components/SlideControl/SlideControl';
-import { BigTitle, HomeScreenContainer } from './HomeScreen.style';
+import { BigTitle, HomeScreenContainer, HomeSlideControl } from './HomeScreen.style';
 import { Text } from '../../../components/Text';
 
 export const HomeScreen = () => {
@@ -32,7 +32,7 @@ export const HomeScreen = () => {
     return (
         <BackgroundVideo source={videos[vidIndex]}>
             <HomeScreenContainer>
-                <BigTitle contrast bold uppercase centered>
+                <BigTitle h4 contrast bold uppercase centered>
                     adventure is worthwhile
                 </BigTitle>
                 <Text contrast bold title capitalize centered>
@@ -41,7 +41,7 @@ export const HomeScreen = () => {
                 <Button>
                     discover more
                 </Button>
-                <SlideControl
+                <HomeSlideControl
                     selectedIndex={vidIndex}
                     onClick={(index) => setVidIndex(index)}
                     count={videos.length}
