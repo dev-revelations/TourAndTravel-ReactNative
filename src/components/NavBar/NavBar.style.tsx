@@ -47,7 +47,7 @@ export const LogoContainer = styled(View)`
 export const SearchBarContainer = styled(Animated.View) <IThemeProp> `
     z-index: 1001;
     position: absolute;
-    top: ${({ theme }) => getSize(theme, Sizes.large)};
+    top: 0;
     left: 0;
     right: 0;
     height: 0px;    

@@ -3,6 +3,7 @@ import { useFonts } from 'expo-font';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { ScrollView } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavBar } from './src/components/NavBar/NavBar';
 import { SafeArea } from './src/components/SafeArea/SafeArea';
 import { AboutUsScreen } from './src/features/AboutUs/Screen/AboutUsScreen';
@@ -26,19 +27,21 @@ export default function App() {
       <>
         <StatusBar style="auto" />
         <AppContextProvider>
-          <SafeArea>
-            <NavBar />
-            <ScrollView style={{ flex: 1 }}>
-              <HomeScreen />
-              <BookScreen />
-              <PackagesScreen />
-              <ServicesScreen />
-              <GalleryScreen />
-              <ReviewScreen />
-              <ContactScreen />
-              <AboutUsScreen />
-            </ScrollView>
-          </SafeArea>
+          <SafeAreaProvider>
+            <SafeArea>
+              <NavBar />
+              <ScrollView style={{ flex: 1 }}>
+                <HomeScreen />
+                <BookScreen />
+                <PackagesScreen />
+                <ServicesScreen />
+                <GalleryScreen />
+                <ReviewScreen />
+                <ContactScreen />
+                <AboutUsScreen />
+              </ScrollView>
+            </SafeArea>
+          </SafeAreaProvider>
         </AppContextProvider>
       </>
     );
