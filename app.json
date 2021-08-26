@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "TourAndTravel",
-    "slug": "TourAndTravel",
+    "name": "TourAndTravelDemo",
+    "slug": "tourandtraveldemo",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
@@ -30,6 +30,8 @@
     },
     "plugins": [
       "expo-av"
-    ]
+    ],
+    "description": "This is an experimental/hobby project that's implemented the ReactNative/mobile version of the Web UI idea introduced in this YoutTube video: https://www.youtube.com/watch?v=nPZp-YNPyC8&list=PLQAuuFwNO49-cIvvxQAtzmyc4D50zTkkP&index=6",
+    "githubUrl": "https://github.com/dev-revelations/TourAndTravel-ReactNative"
   }
 }
