@@ -9,7 +9,7 @@ export const ButtonContainer = styled(Animated.View)`
     background-color: ${({ theme }) => theme.colors.ui.primary};
     border-color: ${({ theme }) => theme.colors.ui.primary};
     border-width: 1px;
-    padding: 2.5% 8%;
+    padding: ${({ theme }) => `${getSpace(theme, Spaces.s2)} ${getSpace(theme, Spaces.s4)}`};
     margin-top: ${({ theme }) => getSpace(theme, Spaces.s3)};
 `;
 
