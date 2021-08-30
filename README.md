@@ -12,6 +12,7 @@ https://www.youtube.com/watch?v=nPZp-YNPyC8&amp;list=PLQAuuFwNO49-cIvvxQAtzmyc4D
 
 ## Demo
 You can check the app demo from the link below using Expo Go :
+
 https://expo.dev/@behzad_dev/tourandtraveldemo
 
 ## Screenshots
