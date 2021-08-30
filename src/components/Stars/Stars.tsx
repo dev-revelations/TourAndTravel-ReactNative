@@ -29,11 +29,3 @@ export const Stars: FC<StarsProps> = (props: StarsProps) => {
 interface StarsProps {
     count: number
 }
-
-enum StarsNumber {
-    one = 1,
-    two = 2,
-    three = 3,
-    four = 4,
-    five = 5
-}
