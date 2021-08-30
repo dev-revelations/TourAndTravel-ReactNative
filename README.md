@@ -1,7 +1,7 @@
 # TourAndTravel-ReactNative
 This project is the reimplementation of the web design idea from the link below as a ReactNative UI.
 
-https://www.youtube.com/watch?v=nPZp-YNPyC8&amp;list=PLQAuuFwNO49-cIvvxQAtzmyc4D50zTkkP&amp;index=6
+https://youtu.be/nPZp-YNPyC8
 
 ## Tech stack
 
