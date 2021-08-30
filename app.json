@@ -31,7 +31,7 @@
     "plugins": [
       "expo-av"
     ],
-    "description": "This is an experimental/hobby project that's implemented the ReactNative/mobile version of the Web UI idea introduced in this YoutTube video: https://www.youtube.com/watch?v=nPZp-YNPyC8&list=PLQAuuFwNO49-cIvvxQAtzmyc4D50zTkkP&index=6",
+    "description": "This is an experimental/hobby project that's implemented the ReactNative/mobile version of the Web UI idea introduced in this YoutTube video: https://youtu.be/nPZp-YNPyC8",
     "githubUrl": "https://github.com/dev-revelations/TourAndTravel-ReactNative"
   }
 }
