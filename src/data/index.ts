@@ -38,3 +38,45 @@ export const getPackages = (): Package[] => [
         stars: 4
     },
 ];
+
+
+export const getServices = (): Service[] => {
+    let a = "sdfsdfsdfsf  sd Sßzxc∂ßßß≈œœsddsafsdf sdf";
+    const svcDescription =
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+        + ' Natus cupiditate optio sint doloribus ullam'
+        + 'id quod fuga veniam soluta debitis.';
+
+    return [
+        {
+            icon: 'hotel',
+            title: 'affordable hotels',
+            desc: svcDescription
+        },
+        {
+            icon: 'utensils',
+            title: 'food and drinks',
+            desc: svcDescription
+        },
+        {
+            icon: 'bullhorn',
+            title: 'safty guide',
+            desc: svcDescription
+        },
+        {
+            icon: 'globe-asia',
+            title: 'around the world',
+            desc: svcDescription
+        },
+        {
+            icon: 'plane',
+            title: 'fastest travel',
+            desc: svcDescription
+        },
+        {
+            icon: 'hiking',
+            title: 'adventures',
+            desc: svcDescription
+        },
+    ];
+};

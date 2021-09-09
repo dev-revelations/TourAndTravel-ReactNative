@@ -4,3 +4,8 @@ type Package = {
     title: string,
     stars: number
 };
+type Service = {
+    icon: string,
+    title: string,
+    desc: string
+};
