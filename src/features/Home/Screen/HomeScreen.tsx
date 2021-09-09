@@ -1,22 +1,31 @@
 import React, { useEffect, useState } from 'react';
+import { connect } from 'react-redux';
+import { AnyAction, bindActionCreators, Dispatch } from 'redux';
 import { BackgroundVideo } from '../../../components/BackgroundVideo/BackgroundVideo';
 import { Button } from '../../../components/Button/Button';
-import { SlideControl } from '../../../components/SlideControl/SlideControl';
-import { BigTitle, HomeScreenContainer, HomeSlideControl } from './HomeScreen.style';
 import { Text } from '../../../components/Text';
+import { fetchVideosAsync, RootState } from '../../../redux';
+import { BigTitle, HomeScreenContainer, HomeSlideControl } from './HomeScreen.style';
 
-export const HomeScreen = () => {
+interface OwnProps { };
+interface DispatchProps {
+    fetchVideos: () => void
+}
+interface StateProps {
+    videos: Array<any>
+}
+
+type Props = StateProps & DispatchProps & OwnProps;
+
+const HomeScreen = (props: Props) => {
+    const videos = props.videos;
 
     const [vidIndex, setVidIndex] = useState(0);
 
+    useEffect(() => {
+        props.fetchVideos();
+    }, []);
 
-    const videos = [
-        require('../../../../assets/images/vid-1.mp4'),
-        require('../../../../assets/images/vid-2.mp4'),
-        require('../../../../assets/images/vid-3.mp4'),
-        require('../../../../assets/images/vid-4.mp4'),
-        require('../../../../assets/images/vid-5.mp4'),
-    ];
 
     useEffect(() => {
         const videoSlideTimer = setInterval(() => {
@@ -50,3 +59,20 @@ export const HomeScreen = () => {
         </BackgroundVideo>
     )
 }
+
+const mapStateToProps = (state: RootState, ownProps: OwnProps): StateProps => {
+    return {
+        videos: state.video.videoList
+    };
+};
+
+const mapDispatchToProps =
+    (dispatch: Dispatch<AnyAction>, ownProps: OwnProps) => {
+        return bindActionCreators({
+            fetchVideos: fetchVideosAsync
+        },
+            dispatch
+        );
+    }
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen);
