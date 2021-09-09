@@ -13,7 +13,7 @@ interface StateProps {
 };
 
 interface DispatchProps {
-    fetchPackages: () => void
+    fetchPackages: () => void;
 }
 
 type Props = StateProps & DispatchProps;
@@ -24,30 +24,28 @@ const PackagesScreen = (props: Props) => {
         props.fetchPackages();
     }, []);
 
+    const loaded = props.packages && props.packages.length > 0;
+
     return (
         <Screen>
+            <Heading text={loaded ? "packages" : "loading..."} />
             {
-                props.packages && props.packages.length > 0
-                    ? [
-                        <Heading text="packages" key={1} />,
-                        <PackageList packages={props.packages} key={2} />
-                    ]
-                    : <Heading text="loading..." />
+                loaded && <PackageList packages={props.packages} />
             }
         </Screen>
     );
-}
+};
 
 const mapStateToProps = (state: RootState): StateProps => {
     return {
         packages: state.package.packageList
     };
-}
+};
 
 const mapDispatchToProps = (dispatch: Dispatch<AnyAction>): DispatchProps => {
     return bindActionCreators({
         fetchPackages: fetchPackagesAsync
     }, dispatch);
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(PackagesScreen);
