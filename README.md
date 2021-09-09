@@ -7,6 +7,7 @@ https://youtu.be/nPZp-YNPyC8
 
 - ReactNative (Expo)
 - React Hooks
+- Redux
 - Typescript
 - Styled Components
 
