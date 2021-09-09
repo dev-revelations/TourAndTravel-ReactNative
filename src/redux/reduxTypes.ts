@@ -10,6 +10,7 @@ export type RootState = {
     video: VideoState,
     package: PackageState,
     service: ServiceState;
+    gallery: GalleryState;
 };
 
 export type AsyncResult<R> = ThunkAction<R, RootState, {}, AnyAction>;
@@ -28,4 +29,9 @@ export type PackageState = {
 export type ServiceAction = AppAction<string, Array<Service>>;
 export type ServiceState = {
     serviceList: Array<Service>;
+};
+
+export type GalleryAction = AppAction<string, Array<any>>;
+export type GalleryState = {
+    imageList: Array<any>;
 };

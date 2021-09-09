@@ -41,7 +41,6 @@ export const getPackages = (): Package[] => [
 
 
 export const getServices = (): Service[] => {
-    let a = "sdfsdfsdfsf  sd Sßzxc∂ßßß≈œœsddsafsdf sdf";
     const svcDescription =
         'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
         + ' Natus cupiditate optio sint doloribus ullam'
@@ -80,3 +79,15 @@ export const getServices = (): Service[] => {
         },
     ];
 };
+
+export const getGalleryImages = (): GalleryImages => [
+    require('../../assets/images/g-1.jpg'),
+    require('../../assets/images/g-2.jpg'),
+    require('../../assets/images/g-3.jpg'),
+    require('../../assets/images/g-4.jpg'),
+    require('../../assets/images/g-5.jpg'),
+    require('../../assets/images/g-6.jpg'),
+    require('../../assets/images/g-7.jpg'),
+    require('../../assets/images/g-8.jpg'),
+    require('../../assets/images/g-9.jpg'),
+];
