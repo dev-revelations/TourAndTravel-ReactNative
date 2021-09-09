@@ -7,14 +7,20 @@ export interface AppAction<T, P> {
 }
 
 export type RootState = {
-    video: VideoState
+    video: VideoState,
+    package: PackageState
 }
 
 export type AsyncResult<R> = ThunkAction<R, RootState, {}, AnyAction>;
 export type AsyncDispatch = ThunkDispatch<RootState, {}, AnyAction>;
 
-export type VideoAction = AppAction<string, Array<any>>
+export type VideoAction = AppAction<string, Array<any>>;
 export type VideoState = {
     videoList: Array<any>
+};
+
+export type PackageAction = AppAction<string, Array<Package>>;
+export type PackageState = {
+    packageList: Array<Package>
 };
 
