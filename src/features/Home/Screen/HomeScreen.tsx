@@ -9,10 +9,10 @@ import { BigTitle, HomeScreenContainer, HomeSlideControl } from './HomeScreen.st
 
 interface OwnProps { };
 interface DispatchProps {
-    fetchVideos: () => void
+    fetchVideos: () => void;
 }
 interface StateProps {
-    videos: Array<any>
+    videos: Array<any>;
 }
 
 type Props = StateProps & DispatchProps & OwnProps;
@@ -36,7 +36,7 @@ const HomeScreen = (props: Props) => {
         return () => {
             clearInterval(videoSlideTimer);
         };
-    }, []);
+    }, [videos]);
 
     return (
         <BackgroundVideo source={videos[vidIndex]}>
@@ -57,8 +57,8 @@ const HomeScreen = (props: Props) => {
                 />
             </HomeScreenContainer>
         </BackgroundVideo>
-    )
-}
+    );
+};
 
 const mapStateToProps = (state: RootState, ownProps: OwnProps): StateProps => {
     return {
@@ -73,6 +73,6 @@ const mapDispatchToProps =
         },
             dispatch
         );
-    }
+    };
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen);
