@@ -11,6 +11,7 @@ export type RootState = {
     package: PackageState,
     service: ServiceState;
     gallery: GalleryState;
+    review: ReviewState;
 };
 
 export type AsyncResult<R> = ThunkAction<R, RootState, {}, AnyAction>;
@@ -34,4 +35,9 @@ export type ServiceState = {
 export type GalleryAction = AppAction<string, Array<any>>;
 export type GalleryState = {
     imageList: Array<any>;
+};
+
+export type ReviewAction = AppAction<string, Array<any>>;
+export type ReviewState = {
+    reviewList: Array<any>;
 };

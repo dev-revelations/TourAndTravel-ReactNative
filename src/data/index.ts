@@ -91,3 +91,10 @@ export const getGalleryImages = (): GalleryImages => [
     require('../../assets/images/g-8.jpg'),
     require('../../assets/images/g-9.jpg'),
 ];
+
+export const getReviews = (): Reviews => [
+    require('../../assets/images/pic1.png'),
+    require('../../assets/images/pic2.png'),
+    require('../../assets/images/pic3.png'),
+    require('../../assets/images/pic4.png'),
+];

@@ -1,5 +1,6 @@
 type Videos = Array<any>;
 type GalleryImages = Array<any>;
+type Reviews = Array<any>;
 type Package = {
     image: any,
     title: string,
